@@ -4,21 +4,28 @@
 @import 'libs/skel';
 
 /*
-	Future Imperfect by HTML5 UP
+	Read Only by HTML5 UP
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 
-$palette-border: #dedede;
+/* Basic */
 
-/* Button */
-
+	code,
+	input[type="text"],
+	input[type="password"],
+	input[type="email"],
+	select,
+	textarea,
+	.box,
+	.image,
+	.image img,
 	input[type="submit"],
 	input[type="reset"],
 	input[type="button"],
-	button,
 	.button {
-		border: solid 1px $palette-border;
+		position: relative;
+		-ms-behavior: url('assets/js/ie/PIE.htc');
 	}
 
 /* Form */
@@ -26,60 +33,30 @@ $palette-border: #dedede;
 	input[type="text"],
 	input[type="password"],
 	input[type="email"],
-	input[type="tel"],
-	select,
-	textarea {
-		border: solid 1px $palette-border;
+	select {
+		line-height: _size(element-height);
 	}
 
-/* Post */
+	input[type="checkbox"],
+	input[type="radio"] {
+		@include vendor('appearance', 'normal');
 
-	.post {
-		border: solid 1px $palette-border;
+		& + label {
+			padding: 0 0 0 1.5em;
 
-		> header {
-			border-bottom: solid 1px $palette-border;
-		}
-	}
-
-/* Mini Post */
-
-	.mini-post {
-		border: solid 1px $palette-border;
-	}
-
-/* Header */
-
-	#header {
-		border-bottom: solid 1px $palette-border;
-
-		.links {
-			border-left: solid 1px $palette-border;
-		}
-
-		.main {
-			ul {
-				li {
-					border-left: solid 1px $palette-border;
-				}
+			&:before {
+				display: none;
 			}
 		}
 	}
 
-/* Sidebar */
+/* Button */
 
-	#sidebar {
-		> * {
-			border-top: solid 1px $palette-border;
-		}
-	}
-
-/* Menu */
-
-	#menu {
-		border-left: solid 1px $palette-border;
-
-		> * {
-			border-top: solid 1px $palette-border;
+	input[type="submit"],
+	input[type="reset"],
+	input[type="button"],
+	.button {
+		&.alt {
+			border: solid _size(border-width) _palette(border2);
 		}
 	}
