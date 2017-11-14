@@ -1,17 +1,26 @@
 /*
-	Future Imperfect by HTML5 UP
+	Read Only by HTML5 UP
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 
-/* Button */
+/* Basic */
 
+	code,
+	input[type="text"],
+	input[type="password"],
+	input[type="email"],
+	select,
+	textarea,
+	.box,
+	.image,
+	.image img,
 	input[type="submit"],
 	input[type="reset"],
 	input[type="button"],
-	button,
 	.button {
-		border: solid 1px #dedede;
+		position: relative;
+		-ms-behavior: url("assets/js/ie/PIE.htc");
 	}
 
 /* Form */
@@ -19,54 +28,33 @@
 	input[type="text"],
 	input[type="password"],
 	input[type="email"],
-	input[type="tel"],
-	select,
-	textarea {
-		border: solid 1px #dedede;
+	select {
+		line-height: 2.75em;
 	}
 
-/* Post */
-
-	.post {
-		border: solid 1px #dedede;
+	input[type="checkbox"],
+	input[type="radio"] {
+		-moz-appearance: normal;
+		-webkit-appearance: normal;
+		-ms-appearance: normal;
+		appearance: normal;
 	}
 
-		.post > header {
-			border-bottom: solid 1px #dedede;
+		input[type="checkbox"] + label,
+		input[type="radio"] + label {
+			padding: 0 0 0 1.5em;
 		}
 
-/* Mini Post */
+			input[type="checkbox"] + label:before,
+			input[type="radio"] + label:before {
+				display: none;
+			}
 
-	.mini-post {
-		border: solid 1px #dedede;
+/* Button */
+
+	input[type="submit"].alt,
+	input[type="reset"].alt,
+	input[type="button"].alt,
+	.button.alt {
+		border: solid 2px #e4e4e4;
 	}
-
-/* Header */
-
-	#header {
-		border-bottom: solid 1px #dedede;
-	}
-
-		#header .links {
-			border-left: solid 1px #dedede;
-		}
-
-		#header .main ul li {
-			border-left: solid 1px #dedede;
-		}
-
-/* Sidebar */
-
-	#sidebar > * {
-		border-top: solid 1px #dedede;
-	}
-
-/* Menu */
-
-	#menu {
-		border-left: solid 1px #dedede;
-	}
-
-		#menu > * {
-			border-top: solid 1px #dedede;
-		}
