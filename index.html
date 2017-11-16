@@ -62,29 +62,19 @@
 								<div class="container">
 									<h3>Where to find us.</h3>
 									<p>We have two locations on Maui!</p>
+									<iframe src="https://www.google.com/maps/embed?pb=!1m23!1m12!1m3!1d59679.35853516065!2d-156.54685703113392!3d20.79290978978681!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m8!3e0!4m0!4m5!1s0x7954d130a0c031b3%3A0xad1cd589958ba5c8!2sMaui+Ocean+Center%2C+The+Aquarium+of+Hawaii%2C+192+Maalaea+Rd%2C+Wailuku%2C+HI+96793!3m2!1d20.7928331!2d-156.5118377!5e0!3m2!1sen!2sus!4v1510855264016" width="400" height="400" frameborder="0" style="border:0" allowfullscreen></iframe>
 									<p>First, on the Ka'anapali Beach walk between the Ka'anapali Beach Hotel and The Whaler.</p>
 
+									<div style='overflow:hidden;height:400px;width:640px;'>
+										<div id='gmap_canvas1' style='height:400px;width:640px;'></div>
+										<style>#gmap_canvas1 img{max-width:none!important;background:none!important}</style>
+									</div>
 
-
-									<!-- <div style="width: 100%">
-										<iframe width="100%" height="400" src="https://www.mapsdirections.info/en/custom-google-maps/map.php?width=100%&height=400&hl=ru&coord=20.923429,-156.695113&q=2525%20Kaanapali%20Parkway%2C%20Lahaina%2C%20HI+(Shaka%20Vibe%20Bubble%20Tea%20%26%20Treats)&ie=UTF8&t=&z=17&iwloc=A&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0">
-											<a href="https://www.mapsdirections.info/en/custom-google-maps/">Create Google Map</a> by <a href="https://www.mapsdirections.info/en/">Measure area on map</a>
-										</iframe>
-									</div><br /> -->
 									<p>Second, in the Maui Ocean Center!</p>
 
-
-
-
-									<!-- <a href="https://www.google.com/maps/dir//Maui+Ocean+Center,+The+Aquarium+of+Hawaii,+Maalaea+Road,+Wailuku,+HI/"><img src="https://maps.googleapis.com/maps/api/staticmap?autoscale=false&size=640x400&maptype=roadmap&format=png&visual_refresh=true&markers=size:mid%7Ccolor:0xff0000%7Clabel:1%7CMaui+Ocean+Center,+The+Aquarium+of+Hawaii,+Maalaea+Road,+Wailuku,+HI" alt="Google Map of Maui Ocean Center, The Aquarium of Hawaii, Maalaea Road, Wailuku, HI"></a> -->
-
-
-
-									<!-- <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA04XQHcD8lF6B3to2JzStkjUeRoI-xFXE&callback=initMap" type="text/javascript"></script> -->
-									<!-- <script src='https://maps.googleapis.com/maps/api/js?v=3.exp'></script> -->
 									<div style='overflow:hidden;height:400px;width:640px;'>
-										<div id='gmap_canvas' style='height:400px;width:640px;'></div>
-										<style>#gmap_canvas img{max-width:none!important;background:none!important}</style>
+										<div id='gmap_canvas2' style='height:400px;width:640px;'></div>
+										<style>#gmap_canvas2 img{max-width:none!important;background:none!important}</style>
 									</div>
 									<!-- <script type='text/javascript'>
 										function initMap() {
@@ -99,29 +89,49 @@
 
 									<script>
 									function initMap() {
-										var storeLocation = {lat: 20.792831, lng: -156.511836};
-										var map = new google.maps.Map(document.getElementById('gmap_canvas'), {
+										var storeLocation1 = {lat: 20.923429, lng: -156.695111};
+										var map1 = new google.maps.Map(document.getElementById('gmap_canvas1'), {
 											zoom: 15,
-											center: storeLocation
+											center: storeLocation1
 										});
-
-										var contentString = '<div id="content">'+
+										var contentString1 = '<div id="content">'+
 												'<h4>Shaka Vibe</h4>'+
-												'<p>Located inside of Maui Ocean Center.</p>'+
-												'<p><a href="https://www.google.com/maps/dir//Maui+Ocean+Center,+The+Aquarium+of+Hawaii,+192+Maalaea+Rd,+Wailuku,+HI+96793/@20.7929098,-156.546857,13z/data=!3m1!4b1!4m9!4m8!1m0!1m5!1m1!1s0x7954d130a0c031b3:0xad1cd589958ba5c8!2m2!1d-156.5118377!2d20.7928331!3e0">Click for directions!</a>'+
+												'<p>Located on the Kaanapali Beachwalk between The Whaler and Kaanapali Beach Hotel.</p>'+
+												'<p><a href="https://goo.gl/maps/zrxXZkyi5FM2">Click for directions!</a>'+
 												'</div>';
-
-										var infowindow = new google.maps.InfoWindow({
-											content: contentString
+										var infowindow1 = new google.maps.InfoWindow({
+											content: contentString1
 										});
-
-										var marker = new google.maps.Marker({
-											position: storeLocation,
-											map: map,
+										var marker1 = new google.maps.Marker({
+											position: storeLocation1,
+											map: map1,
 											title: 'Shaka Vibe'
 										});
+
+										var storeLocation2 = {lat: 20.792831, lng: -156.511836};
+										var map2 = new google.maps.Map(document.getElementById('gmap_canvas2'), {
+											zoom: 15,
+											center: storeLocation2
+										});
+										var contentString2 = '<div id="content">'+
+												'<h4>Shaka Vibe</h4>'+
+												'<p>Located inside of Maui Ocean Center.</p>'+
+												'<p><a href="https://goo.gl/maps/iEDpcnqDJjx">Click for directions!</a>'+
+												'</div>';
+										var infowindow2 = new google.maps.InfoWindow({
+											content: contentString2
+										});
+										var marker2 = new google.maps.Marker({
+											position: storeLocation2,
+											map: map2,
+											title: 'Shaka Vibe'
+										});
+
 										marker.addListener('click', function() {
-											infowindow.open(map, marker);
+											infowindow.open(map1, marker1);
+										});
+										marker.addListener('click', function() {
+											infowindow.open(map2, marker2);
 										});
 										}
 									</script>
