@@ -98,16 +98,31 @@
 									</script> -->
 
 									<script>
-										function initMap() {
-											var uluru = {lat: -25.363, lng: 131.044};
-											var map = new google.maps.Map(document.getElementById('gmap_canvas'), {
-												zoom: 4,
-												center: uluru
-											});
-											var marker = new google.maps.Marker({
-												position: uluru,
-												map: map
-											});
+									function initMap() {
+										var storeLocation = {lat: 20.792831, lng: -156.511836};
+										var map = new google.maps.Map(document.getElementById('map'), {
+											zoom: 13,
+											center: storeLocation
+										});
+
+										var contentString = '<div id="content">'+
+												'<h2>Shaka Vibe</h2>'+
+												'<p>Located inside of Maui Ocean Center.</p>'+
+												'<p>Click for directions: <a href="https://www.google.com/maps/dir//Maui+Ocean+Center,+The+Aquarium+of+Hawaii,+192+Maalaea+Rd,+Wailuku,+HI+96793/@20.7929098,-156.546857,13z/data=!3m1!4b1!4m9!4m8!1m0!1m5!1m1!1s0x7954d130a0c031b3:0xad1cd589958ba5c8!2m2!1d-156.5118377!2d20.7928331!3e0</a> '+
+												'</div>';
+
+										var infowindow = new google.maps.InfoWindow({
+											content: contentString
+										});
+
+										var marker = new google.maps.Marker({
+											position: storeLocation,
+											map: map,
+											title: 'Shaka Vibe'
+										});
+										marker.addListener('click', function() {
+											infowindow.open(map, marker);
+										});
 										}
 									</script>
 									<script async defer
@@ -134,21 +149,21 @@
 									<p>We offer bubble tea, shaved ice, smoothies, so on and so on...</p>
 									<div class="features">
 										<article>
-											<a href="#" class="image"><img src="https://via.placeholder.com/688x397" alt="" /></a>
+											<a href="#" class="image"><img src="https://via.placeholder.com/680x400" alt="Bubble Tea" /></a>
 											<div class="inner">
 												<h4>Bubble Tea</h4>
 												<p>Integer eu ante ornare amet commetus vestibulum blandit integer in curae ac faucibus integer adipiscing ornare amet.</p>
 											</div>
 										</article>
 										<article>
-											<a href="#" class="image"><img src="https://via.placeholder.com/680x400" alt="" /></a>
+											<a href="#" class="image"><img src="https://via.placeholder.com/680x400" alt="Shaved Ice" /></a>
 											<div class="inner">
 												<h4>Shaved Ice</h4>
 												<p>Integer eu ante ornare amet commetus vestibulum blandit integer in curae ac faucibus integer adipiscing ornare amet.</p>
 											</div>
 										</article>
 										<article>
-											<a href="#" class="image"><img src="https://via.placeholder.com/640x400" alt="" /></a>
+											<a href="#" class="image"><img src="https://via.placeholder.com/680x400" alt="Fruit Smoothies" /></a>
 											<div class="inner">
 												<h4>Fruit Smoothies</h4>
 												<p>Integer eu ante ornare amet commetus vestibulum blandit integer in curae ac faucibus integer adipiscing ornare amet.</p>
