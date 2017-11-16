@@ -80,21 +80,21 @@
 
 
 
-
-									<script src='https://maps.googleapis.com/maps/api/js?v=3.exp'></script>
+									<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA04XQHcD8lF6B3to2JzStkjUeRoI-xFXE&callback=initMap" type="text/javascript"></script>
+									<!-- <script src='https://maps.googleapis.com/maps/api/js?v=3.exp'></script> -->
 									<div style='overflow:hidden;height:400px;width:640px;'>
 										<div id='gmap_canvas' style='height:400px;width:640px;'></div>
 										<style>#gmap_canvas img{max-width:none!important;background:none!important}</style>
 									</div>
 									<script type='text/javascript'>
-										function init_map() {
+										function initMap() {
 											var myOptions = {zoom:16,center:new google.maps.LatLng(20.7927353,-156.51174430000003),mapTypeId: google.maps.MapTypeId.ROADMAP};
 											let map = new google.maps.Map(document.getElementById('gmap_canvas'), myOptions);
 											let marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(20.7927353,-156.51174430000003)});
 											let infowindow = new google.maps.InfoWindow({content:'<strong>Shaka Vibe</strong><a href="https://www.google.com/maps/dir//Maui+Ocean+Center,+The+Aquarium+of+Hawaii,+192+Maalaea+Rd,+Wailuku,+HI+96793/@20.7929098,-156.546857,13z/data=!3m1!4b1!4m9!4m8!1m0!1m5!1m1!1s0x7954d130a0c031b3:0xad1cd589958ba5c8!2m2!1d-156.5118377!2d20.7928331!3e0"><br>192 Maalaea Rd, Wailuku, HI 96793<br>Click For Directions!</a>'});
 											google.maps.event.addListener(marker, 'click', function(){infowindow.open(map,marker);});
 											infowindow.open(map,marker);}
-											google.maps.event.addDomListener(window, 'load', init_map);
+											google.maps.event.addDomListener(window, 'load', initMap);
 									</script>
 
 
