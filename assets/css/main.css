@@ -2615,10 +2615,15 @@
 	#footer {
 		background: #fafafa;
 		border-top: 0;
-		color: #c0c0c0;
+		color: #277ebe;
 		overflow: hidden;
 		padding: 4em 0 2em 0;
 	}
+
+		#footer p {
+			font-size: 0.8em;
+			font-style: italic;
+		}
 
 		#footer .copyright {
 			line-height: 1em;
